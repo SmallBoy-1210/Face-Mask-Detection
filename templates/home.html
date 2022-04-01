@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Face Mask Detection</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+ 
+</head>
+
+<body>
+ <div class="login">
+	<h1>Face Mask Detection </h1>
+
+     <!-- Main Input For Receiving Query to our Custom Vision -->
+    <form action="{{ url_for('predict')}}"method="post">
+     
+    	<input type="text" name="experience" placeholder="Copy and Paste image url here :" required="required" /><br>
+      <button type="submit" class="btn btn-primary btn-block btn-large">Check</button>
+    </form>
+
+   <br>
+   <br>
+  <p style="font-size: 30px;">
+    Instructions:
+  </p>
+  <li style="font-size: 15px;">Search for images of people with or without mask on Google Images</li>
+  <li style="font-size: 15px;">Image must preferably have only one subject</li>
+  <li style="font-size: 15px;">Select an image and right click to select "Copy image address"</li> 
+  <li style="font-size: 15px;">Sample Image links given below : <p><a href="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGVyc29ufGVufDB8fDB8fA%3D%3D&w=1000&q=80" style="color: burlywood;">Without Mask</a></p>
+  <p><a href="https://timesofindia.indiatimes.com/thumb/msid-78403220,width-1200,height-900,resizemode-4/.jpg" style="color:burlywood;">With Mask</a></p></li>
+
+
+   
+ </div>
+
+
+</body>
+</html>

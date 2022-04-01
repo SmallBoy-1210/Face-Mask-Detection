@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Flask Application </title>
+</head>
+
+<body>
+<h1> Results </h1>
+<img src="{{ user_image }}" alt="Result Image">
+<canvas id="canvas1"></canvas>
+<p>
+    <b style="font-size: 40px;">{{imgtag}}</b>
+</p>
+<p>
+    <b style="font-size: 40px;">{{imgprob}}</b>
+</p>
+
+
+<script>
+    
+    var image=document.querySelector("img");
+    var canvas= document.getElementById("canvas1");
+
+    var ctx= canvas.getContext("2d");
+    canvas.width =image.width;
+    canvas.height=image.height;
+
+    ctx.drawImage(image,0,0)
+</script>
+</body>
+
+</html>
